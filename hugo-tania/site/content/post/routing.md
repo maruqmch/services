@@ -22,6 +22,33 @@ The following config must be set
 ## cURL
 
 
+### Routing ETA
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+
+```shell
+> curl 'https://api.m3o.com/routing/Routing/ETA' \
+  -H 'micro-namespace: $yourNamespace' \
+  -H 'authorization: Bearer $yourToken' \
+  -d {
+  "destination": {
+    "latitude": 1,
+    "longitude": 1
+  },
+  "origin": {
+    "latitude": 1,
+    "longitude": 1
+  },
+  "speed": 1,
+  "type": "type of transport e.g car, foot, bicycle"
+};
+# Response
+{
+  "duration": 1
+}
+```
+
+
 ### Routing Route
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
@@ -38,19 +65,17 @@ being lifted correctly from the proto by the openapi spec generator -->
   "origin": {
     "latitude": 1,
     "longitude": 1
-  },
-  "transport": "Mode of transport e.g driving, walking, cycling"
+  }
 };
 # Response
 {
   "waypoints": [
     {
-      "distance": 1,
       "location": {
         "latitude": 1,
         "longitude": 1
       },
-      "name": "string"
+      "name": "street name or related reference"
     }
   ]
 }

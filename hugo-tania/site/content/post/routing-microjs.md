@@ -9,7 +9,7 @@ labels:
 ## Micro.js
 
 
-### Routing ETA
+### Routing Eta
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 
@@ -20,7 +20,7 @@ being lifted correctly from the proto by the openapi spec generator -->
     // Login is only required for endpoints doing authorization
     Micro.requireLogin(function () {
       Micro.post(
-        "/routing/Routing/ETA",
+        "/routing/Routing/Eta",
         "micro",
         {
           "destination": {

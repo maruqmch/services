@@ -22,12 +22,12 @@ The following config must be set
 ## cURL
 
 
-### Routing ETA
+### Routing Eta
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 
 ```shell
-> curl 'https://api.m3o.com/routing/Routing/ETA' \
+> curl 'https://api.m3o.com/routing/Routing/Eta' \
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
   -d {

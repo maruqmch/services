@@ -11,6 +11,14 @@ Point to point routing directions
 
 The routing service provides point to point directions
 
+## Config
+
+The following config must be set
+
+- **routing.mode**: "google" or "osrm"
+- **google.api.key**: google maps api key if using google
+- **osrm.api.address"**: location of osrm api
+
 ## cURL
 
 
@@ -24,20 +32,25 @@ being lifted correctly from the proto by the openapi spec generator -->
   -H 'authorization: Bearer $yourToken' \
   -d {
   "destination": {
-    "latitude": {},
-    "longitude": {}
+    "latitude": 1,
+    "longitude": 1
   },
   "origin": {
-    "latitude": {},
-    "longitude": {}
-  }
+    "latitude": 1,
+    "longitude": 1
+  },
+  "transport": "Mode of transport e.g driving, walking, cycling"
 };
 # Response
 {
   "waypoints": [
     {
-      "latitude": {},
-      "longitude": {}
+      "distance": 1,
+      "location": {
+        "latitude": 1,
+        "longitude": 1
+      },
+      "name": "string"
     }
   ]
 }

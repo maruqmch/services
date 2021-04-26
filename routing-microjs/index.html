@@ -97,6 +97,7 @@ being lifted correctly from the proto by the openapi spec generator -->
 </span><span class="lnt">23
 </span><span class="lnt">24
 </span><span class="lnt">25
+</span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://web.m3o.com/assets/micro.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -109,13 +110,14 @@ being lifted correctly from the proto by the openapi spec generator -->
         <span class="s2">&#34;micro&#34;</span><span class="p">,</span>
         <span class="p">{</span>
           <span class="s2">&#34;destination&#34;</span><span class="o">:</span> <span class="p">{</span>
-                    <span class="s2">&#34;latitude&#34;</span><span class="o">:</span> <span class="p">{},</span>
-                    <span class="s2">&#34;longitude&#34;</span><span class="o">:</span> <span class="p">{}</span>
+                    <span class="s2">&#34;latitude&#34;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&#34;longitude&#34;</span><span class="o">:</span> <span class="mi">1</span>
           <span class="p">},</span>
           <span class="s2">&#34;origin&#34;</span><span class="o">:</span> <span class="p">{</span>
-                    <span class="s2">&#34;latitude&#34;</span><span class="o">:</span> <span class="p">{},</span>
-                    <span class="s2">&#34;longitude&#34;</span><span class="o">:</span> <span class="p">{}</span>
-          <span class="p">}</span>
+                    <span class="s2">&#34;latitude&#34;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&#34;longitude&#34;</span><span class="o">:</span> <span class="mi">1</span>
+          <span class="p">},</span>
+          <span class="s2">&#34;transport&#34;</span><span class="o">:</span> <span class="s2">&#34;Mode of transport e.g driving, walking, cycling&#34;</span>
 <span class="p">},</span>
         <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
           <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Success.&#34;</span><span class="p">);</span>

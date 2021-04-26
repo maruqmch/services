@@ -24,13 +24,14 @@ being lifted correctly from the proto by the openapi spec generator -->
         "micro",
         {
           "destination": {
-                    "latitude": {},
-                    "longitude": {}
+                    "latitude": 1,
+                    "longitude": 1
           },
           "origin": {
-                    "latitude": {},
-                    "longitude": {}
-          }
+                    "latitude": 1,
+                    "longitude": 1
+          },
+          "transport": "Mode of transport e.g driving, walking, cycling"
 },
         function (data) {
           console.log("Success.");

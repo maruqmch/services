@@ -69,6 +69,13 @@
     <p>Point to point routing directions</p>
 <h1 id="routing-service">Routing Service</h1>
 <p>The routing service provides point to point directions</p>
+<h2 id="config">Config</h2>
+<p>The following config must be set</p>
+<ul>
+<li><strong>routing.mode</strong>: &ldquo;google&rdquo; or &ldquo;osrm&rdquo;</li>
+<li><strong>google.api.key</strong>: google maps api key if using google</li>
+<li><strong>osrm.api.address&quot;</strong>: location of osrm api</li>
+</ul>
 <h2 id="curl">cURL</h2>
 <h3 id="routing-route">Routing Route</h3>
 <!-- We use the request body description here as endpoint descriptions are not
@@ -97,6 +104,11 @@ being lifted correctly from the proto by the openapi spec generator -->
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/routing/Routing/Route&#39;</span> <span class="se">\
@@ -104,20 +116,25 @@ being lifted correctly from the proto by the openapi spec generator -->
 </span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
 </span><span class="se"></span>  -d <span class="o">{</span>
   <span class="s2">&#34;destination&#34;</span>: <span class="o">{</span>
-    <span class="s2">&#34;latitude&#34;</span>: <span class="o">{}</span>,
-    <span class="s2">&#34;longitude&#34;</span>: <span class="o">{}</span>
+    <span class="s2">&#34;latitude&#34;</span>: 1,
+    <span class="s2">&#34;longitude&#34;</span>: <span class="m">1</span>
   <span class="o">}</span>,
   <span class="s2">&#34;origin&#34;</span>: <span class="o">{</span>
-    <span class="s2">&#34;latitude&#34;</span>: <span class="o">{}</span>,
-    <span class="s2">&#34;longitude&#34;</span>: <span class="o">{}</span>
-  <span class="o">}</span>
+    <span class="s2">&#34;latitude&#34;</span>: 1,
+    <span class="s2">&#34;longitude&#34;</span>: <span class="m">1</span>
+  <span class="o">}</span>,
+  <span class="s2">&#34;transport&#34;</span>: <span class="s2">&#34;Mode of transport e.g driving, walking, cycling&#34;</span>
 <span class="o">}</span><span class="p">;</span>
 <span class="c1"># Response</span>
 <span class="o">{</span>
   <span class="s2">&#34;waypoints&#34;</span>: <span class="o">[</span>
     <span class="o">{</span>
-      <span class="s2">&#34;latitude&#34;</span>: <span class="o">{}</span>,
-      <span class="s2">&#34;longitude&#34;</span>: <span class="o">{}</span>
+      <span class="s2">&#34;distance&#34;</span>: 1,
+      <span class="s2">&#34;location&#34;</span>: <span class="o">{</span>
+        <span class="s2">&#34;latitude&#34;</span>: 1,
+        <span class="s2">&#34;longitude&#34;</span>: <span class="m">1</span>
+      <span class="o">}</span>,
+      <span class="s2">&#34;name&#34;</span>: <span class="s2">&#34;string&#34;</span>
     <span class="o">}</span>
   <span class="o">]</span>
 <span class="o">}</span>

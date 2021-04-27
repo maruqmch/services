@@ -16,10 +16,75 @@ The routing service provides point to point directions
 The following config must be set
 
 - **routing.mode**: "google" or "osrm"
-- **google.api.key**: google maps api key if using google
-- **osrm.api.address"**: location of osrm api
+- **routing.address"**: location of osrm api if used
+- **google.apikey**: google maps api key if using google
 
 ## cURL
+
+
+### Routing Directions
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+
+```shell
+> curl 'https://api.m3o.com/routing/Routing/Directions' \
+  -H 'micro-namespace: $yourNamespace' \
+  -H 'authorization: Bearer $yourToken' \
+  -d {
+  "destination": {
+    "latitude": 1,
+    "longitude": 1
+  },
+  "origin": {
+    "latitude": 1,
+    "longitude": 1
+  }
+};
+# Response
+{
+  "directions": [
+    {
+      "distance": 1,
+      "duration": 1,
+      "instruction": "human readable instruction",
+      "intersections": [
+        {
+          "bearings": [
+            1
+          ],
+          "location": {
+            "latitude": 1,
+            "longitude": 1
+          }
+        }
+      ],
+      "maneuver": {
+        "action": "string",
+        "bearing_after": 1,
+        "bearing_before": 1,
+        "direction": "string",
+        "location": {
+          "latitude": 1,
+          "longitude": 1
+        }
+      },
+      "name": "street name or location",
+      "reference": "alternative reference"
+    }
+  ],
+  "distance": 1,
+  "duration": 1,
+  "waypoints": [
+    {
+      "location": {
+        "latitude": 1,
+        "longitude": 1
+      },
+      "name": "street name or related reference"
+    }
+  ]
+}
+```
 
 
 ### Routing Eta
@@ -69,6 +134,8 @@ being lifted correctly from the proto by the openapi spec generator -->
 };
 # Response
 {
+  "distance": 1,
+  "duration": 1,
   "waypoints": [
     {
       "location": {

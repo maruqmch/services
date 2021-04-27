@@ -9,6 +9,39 @@ labels:
 ## Micro.js
 
 
+### Routing Directions
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+
+```html
+<script src="https://web.m3o.com/assets/micro.js"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function (event) {
+    // Login is only required for endpoints doing authorization
+    Micro.requireLogin(function () {
+      Micro.post(
+        "/routing/Routing/Directions",
+        "micro",
+        {
+          "destination": {
+                    "latitude": 1,
+                    "longitude": 1
+          },
+          "origin": {
+                    "latitude": 1,
+                    "longitude": 1
+          }
+},
+        function (data) {
+          console.log("Success.");
+        }
+      );
+    });
+  });
+</script>
+```
+
+
 ### Routing Eta
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->

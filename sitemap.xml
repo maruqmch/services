@@ -113,6 +113,14 @@
   </url>
   
   <url>
+    <loc>https://services.m3o.com/otp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://services.m3o.com/otp-microjs/</loc>
+  </url>
+  
+  <url>
     <loc>https://services.m3o.com/places/</loc>
   </url>
   

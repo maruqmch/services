@@ -64,16 +64,9 @@
     </article>
 
     <div class="article-post">
-    <h1 id="otp-service">Otp Service</h1>
-<p>This is the Otp service</p>
-<p>Generated with</p>
-<pre><code>micro new otp
-</code></pre><h2 id="usage">Usage</h2>
-<p>Generate the proto code</p>
-<pre><code>make proto
-</code></pre><p>Run the service</p>
-<pre><code>micro run .
-</code></pre><h2 id="curl">cURL</h2>
+    <h1 id="otp-service">OTP Service</h1>
+<p>Generate one time passwords (OTP) for any unique id, email or user. Codes are valid for up to 60 seconds.</p>
+<h2 id="curl">cURL</h2>
 <h3 id="otp-generate">Otp Generate</h3>
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
@@ -107,7 +100,7 @@ being lifted correctly from the proto by the openapi spec generator -->
 </div><h3 id="otp-validate">Otp Validate</h3>
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-<p>Validate the code</p>
+<p>Validate the OTP code</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1

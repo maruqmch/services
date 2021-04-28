@@ -4,29 +4,10 @@ servicename: otp
 labels: 
 - Readme
 ---
-# Otp Service
+# OTP Service
 
-This is the Otp service
+Generate one time passwords (OTP) for any unique id, email or user. Codes are valid for up to 60 seconds.
 
-Generated with
-
-```
-micro new otp
-```
-
-## Usage
-
-Generate the proto code
-
-```
-make proto
-```
-
-Run the service
-
-```
-micro run .
-```
 ## cURL
 
 
@@ -51,7 +32,7 @@ Generate an OTP (one time pass) code
 ### Otp Validate
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-Validate the code
+Validate the OTP code
 ```shell
 > curl 'https://api.m3o.com/otp/Otp/Validate' \
   -H 'micro-namespace: $yourNamespace' \

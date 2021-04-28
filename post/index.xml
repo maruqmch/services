@@ -179,9 +179,7 @@ Location Service Send, store and search real time gps point data and tracking in
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://services.m3o.com/otp/</guid>
-      <description>Otp Service This is the Otp service
-Generated with
-micro new otp Usage Generate the proto code</description>
+      <description>OTP Service Generate one time passwords (OTP) for any unique id, email or user.</description>
     </item>
     
     <item>

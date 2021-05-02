@@ -1,195 +1,101 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://services.m3o.com/explore/</loc>
     <lastmod>2020-11-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/labels/backend/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/chats/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/chats-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/datastore/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/datastore-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/feeds/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/feeds-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/files/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/files-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/geocoding/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/geocoding-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/groups/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/groups-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/labels/headless-cms/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/helloworld/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/helloworld-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/invites/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/invites-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/labels/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/location/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/location-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/labels/logistics/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/labels/micro.js/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/otp/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/otp-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/places/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/places-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/post/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/posts/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/posts-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/labels/readme/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/routing/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/routing-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/seen/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/seen-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/sentiment/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/sentiment-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/streams/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/streams-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/tags/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/tags-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/threads/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/threads-microjs/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/users/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://services.m3o.com/users-microjs/</loc>
   </url>
-  
 </urlset>

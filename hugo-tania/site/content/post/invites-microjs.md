@@ -75,8 +75,8 @@ being lifted correctly from the proto by the openapi spec generator -->
         "/invites/Invites/List",
         "micro",
         {
-          "email": {},
-          "group_id": {}
+          "email": "string",
+          "group_id": "string"
 },
         function (data) {
           console.log("Success.");
@@ -102,8 +102,8 @@ being lifted correctly from the proto by the openapi spec generator -->
         "/invites/Invites/Read",
         "micro",
         {
-          "code": {},
-          "id": {}
+          "code": "string",
+          "id": "string"
 },
         function (data) {
           console.log("Success.");

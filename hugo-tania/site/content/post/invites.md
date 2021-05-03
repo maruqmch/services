@@ -97,8 +97,8 @@ being lifted correctly from the proto by the openapi spec generator -->
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
   -d {
-  "email": {},
-  "group_id": {}
+  "email": "string",
+  "group_id": "string"
 };
 # Response
 {
@@ -123,8 +123,8 @@ being lifted correctly from the proto by the openapi spec generator -->
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
   -d {
-  "code": {},
-  "id": {}
+  "code": "string",
+  "id": "string"
 };
 # Response
 {

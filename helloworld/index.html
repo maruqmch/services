@@ -66,20 +66,10 @@
     </article>
 
     <div class="article-post">
-    <h1 id="helloworld-service">Helloworld Service</h1>
-<p>This is the Helloworld service</p>
-<h2 id="overview">Overview</h2>
-<p>An example of how to write a simple helloworld service. This can also be generated using <code>micro new helloworld</code>.</p>
-<h2 id="usage">Usage</h2>
-<pre><code># run the server
-micro server
-
-# run the service
-micro run github.com/micro/services/helloworld
-
-## call the service
-micro call helloworld Helloworld.Call '{&quot;name&quot;: &quot;Alice&quot;}'
-</code></pre><h2 id="curl">cURL</h2>
+    <p>A simple hello world service</p>
+<h1 id="helloworld-service">Helloworld Service</h1>
+<p>Helloworld simply returns a personalized message in response to a name.</p>
+<h2 id="curl">cURL</h2>
 <h3 id="helloworld-call">Helloworld Call</h3>
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->

@@ -5,12 +5,12 @@ labels:
 - Readme
 - Logistics
 ---
-Geocode an address to gps coordinates and the reverse.
+Geocode an address to gps location and the reverse.
 
-# Geocoding service
+# Geocoding Service
 
-The geocoding service provides address to lat lng geocoding as well as the reverse. Useful for building mapping or location 
-based services.
+The geocoding service provides address to lat lng geocoding as well as the reverse. 
+It's useful for building mapping or location based services.
 
 ## cURL
 

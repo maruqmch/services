@@ -9,10 +9,10 @@ labels:
 ## Micro.js
 
 
-### Geocoding Geocode
+### Geocoding Lookup
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-Schema related to #/components/requestBodies/GeocodingGeocodeRequest not found
+Lookup returns a geocoded address including normalized address and gps coordinates
 ```html
 <script src="https://web.m3o.com/assets/micro.js"></script>
 <script type="text/javascript">
@@ -20,9 +20,14 @@ Schema related to #/components/requestBodies/GeocodingGeocodeRequest not found
     // Login is only required for endpoints doing authorization
     Micro.requireLogin(function () {
       Micro.post(
-        "/geocoding/Geocoding/Geocode",
+        "/geocoding/Geocoding/Lookup",
         "micro",
-        Schema related to #/components/requestBodies/GeocodingGeocodeRequest not found,
+        {
+          "address": "string",
+          "city": "string",
+          "country": "string",
+          "postcode": "string"
+},
         function (data) {
           console.log("Success.");
         }
@@ -36,7 +41,7 @@ Schema related to #/components/requestBodies/GeocodingGeocodeRequest not found
 ### Geocoding Reverse
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-Schema related to #/components/requestBodies/GeocodingReverseRequest not found
+Reverse lookup an address from gps coordinates
 ```html
 <script src="https://web.m3o.com/assets/micro.js"></script>
 <script type="text/javascript">
@@ -46,7 +51,10 @@ Schema related to #/components/requestBodies/GeocodingReverseRequest not found
       Micro.post(
         "/geocoding/Geocoding/Reverse",
         "micro",
-        Schema related to #/components/requestBodies/GeocodingReverseRequest not found,
+        {
+          "latitude": 1,
+          "longitude": 1
+},
         function (data) {
           console.log("Success.");
         }

@@ -15,31 +15,63 @@ based services.
 ## cURL
 
 
-### Geocoding Geocode
+### Geocoding Lookup
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-Schema related to #/components/requestBodies/GeocodingGeocodeRequest not found
+Lookup returns a geocoded address including normalized address and gps coordinates
 ```shell
-> curl 'https://api.m3o.com/geocoding/Geocoding/Geocode' \
+> curl 'https://api.m3o.com/geocoding/Geocoding/Lookup' \
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
-  -d Schema related to #/components/requestBodies/GeocodingGeocodeRequest not found;
+  -d {
+  "address": "string",
+  "city": "string",
+  "country": "string",
+  "postcode": "string"
+};
 # Response
-Schema related to #/components/responses/GeocodingGeocodeResponse not found
+{
+  "address": {
+    "city": "string",
+    "country": "string",
+    "line_one": "string",
+    "line_two": "string",
+    "postcode": "string"
+  },
+  "location": {
+    "latitude": 1,
+    "longitude": 1
+  }
+}
 ```
 
 
 ### Geocoding Reverse
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-Schema related to #/components/requestBodies/GeocodingReverseRequest not found
+Reverse lookup an address from gps coordinates
 ```shell
 > curl 'https://api.m3o.com/geocoding/Geocoding/Reverse' \
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
-  -d Schema related to #/components/requestBodies/GeocodingReverseRequest not found;
+  -d {
+  "latitude": 1,
+  "longitude": 1
+};
 # Response
-Schema related to #/components/responses/GeocodingReverseResponse not found
+{
+  "address": {
+    "city": "string",
+    "country": "string",
+    "line_one": "string",
+    "line_two": "string",
+    "postcode": "string"
+  },
+  "location": {
+    "latitude": 1,
+    "longitude": 1
+  }
+}
 ```
 
 

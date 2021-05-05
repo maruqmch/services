@@ -4,29 +4,12 @@ servicename: image
 labels: 
 - Readme
 ---
+Quickly upload, resize and convert images
+
 # Image Service
 
-This is the Image service
+The image service provides upload, resize and image conversion. It provides a cdn for uploaded images and a simple API.
 
-Generated with
-
-```
-micro new image
-```
-
-## Usage
-
-Generate the proto code
-
-```
-make proto
-```
-
-Run the service
-
-```
-micro run .
-```
 ## cURL
 
 

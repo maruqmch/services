@@ -5,9 +5,11 @@ labels:
 - Readme
 - Headless CMS
 ---
+Generate tags and metadata for any resource
+
 # Tag Service
 
-Tag any resource by saving a tag associated with their respective ID
+The tags service enables creation of tags for any resource by saving a tag associated with their respective ID
 
 ## cURL
 

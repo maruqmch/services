@@ -40,6 +40,10 @@
   </url><url>
     <loc>https://services.m3o.com/helloworld-microjs/</loc>
   </url><url>
+    <loc>https://services.m3o.com/image/</loc>
+  </url><url>
+    <loc>https://services.m3o.com/image-microjs/</loc>
+  </url><url>
     <loc>https://services.m3o.com/invites/</loc>
   </url><url>
     <loc>https://services.m3o.com/invites-microjs/</loc>

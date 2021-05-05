@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title> image | Micro Services</title>
+    
+    
+    
+    <link rel="stylesheet" href="/sass/main.min.f8252f945ce0ab8c22c6b9c5036ccf8c5d84784e8587ce2007b283a42510502b.css">
+</head>
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    Micro Services
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <a href="/explore/">Explore</a>
+                
+                
+            </div>
+            </div>
+    </div>
+</nav>
+        <main>
+            
+
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1><a href="/image">image</a></h1>
+                    <div>
+                        <a href="/image"><u>Readme</u></a>
+                        &nbsp;
+                        <a href="/image-microjs"><u>Micro.js</u></a>
+                        &nbsp;
+                        <a href="/image/api"><u>API Spec</u></a>
+                        &nbsp;
+                        <a href="https://github.com/micro/services/tree/master/image"><u>Source</u></a>
+                    </div>
+                    <div class="post-meta">
+                        
+                        <div class="tags">
+                            
+                            <a href="/labels/readme/">Readme</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <h1 id="image-service">Image Service</h1>
+<p>This is the Image service</p>
+<p>Generated with</p>
+<pre><code>micro new image
+</code></pre><h2 id="usage">Usage</h2>
+<p>Generate the proto code</p>
+<pre><code>make proto
+</code></pre><p>Run the service</p>
+<pre><code>micro run .
+</code></pre><h2 id="curl">cURL</h2>
+<h3 id="image-convert">Image Convert</h3>
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+<p>Convert an image from one format (jpeg, png etc.) to an other either on the fly (from base64 to base64),
+or by uploading the conversion result.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/image/Image/Convert&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
+</span><span class="se"></span>  -d <span class="o">{</span>
+  <span class="s2">&#34;base64&#34;</span>: <span class="s2">&#34;base64 encoded image to resize,. ie. \&#34;data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==\&#34;&#34;</span>,
+  <span class="s2">&#34;image_id&#34;</span>: <span class="s2">&#34;output name of the image including extension, ie. \&#34;cat.png\&#34;&#34;</span>,
+  <span class="s2">&#34;output_url&#34;</span>: true,
+  <span class="s2">&#34;url&#34;</span>: <span class="s2">&#34;url of the image to resize&#34;</span>
+<span class="o">}</span><span class="p">;</span>
+<span class="c1"># Response</span>
+<span class="o">{</span>
+  <span class="s2">&#34;base64&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+  <span class="s2">&#34;url&#34;</span>: <span class="s2">&#34;string&#34;</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="image-resize">Image Resize</h3>
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+<p>Resize an image on the fly without storing it (by sending and receiving a base64 encoded image), or resize and upload depending on parameters.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/image/Image/Resize&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
+</span><span class="se"></span>  -d <span class="o">{</span>
+  <span class="s2">&#34;base64&#34;</span>: <span class="s2">&#34;base64 encoded image to resize,. ie. \&#34;data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==\&#34;&#34;</span>,
+  <span class="s2">&#34;height&#34;</span>: 1,
+  <span class="s2">&#34;image_id&#34;</span>: <span class="s2">&#34;output name of the image including extension, ie. \&#34;cat.png\&#34;&#34;</span>,
+  <span class="s2">&#34;output_url&#34;</span>: true,
+  <span class="s2">&#34;url&#34;</span>: <span class="s2">&#34;url of the image to resize&#34;</span>,
+  <span class="s2">&#34;width&#34;</span>: <span class="m">1</span>
+<span class="o">}</span><span class="p">;</span>
+<span class="c1"># Response</span>
+<span class="o">{</span>
+  <span class="s2">&#34;base64&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+  <span class="s2">&#34;url&#34;</span>: <span class="s2">&#34;string&#34;</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="image-upload">Image Upload</h3>
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+<p>Upload an image by either sending a base64 encoded image to this endpoint or a URL.
+To resize an image before uploading, see the Resize endpoint.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/image/Image/Upload&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
+</span><span class="se"></span>  -d <span class="o">{</span>
+  <span class="s2">&#34;base64&#34;</span>: <span class="s2">&#34;Base64 encoded image to upload,. ie. \&#34;data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==\&#34;&#34;</span>,
+  <span class="s2">&#34;image_id&#34;</span>: <span class="s2">&#34;Output name of the image including extension, ie. \&#34;cat.png\&#34;&#34;</span>,
+  <span class="s2">&#34;url&#34;</span>: <span class="s2">&#34;URL of the image to upload&#34;</span>
+<span class="o">}</span><span class="p">;</span>
+<span class="c1"># Response</span>
+<span class="o">{</span>
+  <span class="s2">&#34;url&#34;</span>: <span class="s2">&#34;string&#34;</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+</div>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+            <a href="https://m3o.com">© 2020 Micro Services, Inc.</a>
+            
+        </nav>
+    </section>
+    
+    <script async src="/js/features.min.c5d8f3350f5a652f526b982306299353824299adb7a3bd261ecffacc47087f66.js"></script>
+</footer>
+    </body>
+</html>

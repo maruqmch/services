@@ -17,7 +17,7 @@ Helloworld simply returns a personalized message in response to a name.
 ### Helloworld Call
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-
+Call returns a personalised "Hello $name" response
 ```shell
 > curl 'https://api.m3o.com/helloworld/Helloworld/Call' \
   -H 'micro-namespace: $yourNamespace' \

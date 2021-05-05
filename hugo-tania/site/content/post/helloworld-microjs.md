@@ -12,7 +12,7 @@ labels:
 ### Helloworld Call
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-
+Call returns a personalised "Hello $name" response
 ```html
 <script src="https://web.m3o.com/assets/micro.js"></script>
 <script type="text/javascript">

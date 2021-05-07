@@ -30,7 +30,7 @@ Create a new chat between mulitple users
 # Response
 {
   "chat": {
-    "created_at": 1,
+    "created_at": "RFC3339Nano timestamp",
     "id": "unique id of the chat",
     "user_ids": [
       "string"
@@ -61,7 +61,7 @@ List messages within a chat
       "author_id": "user id of the message",
       "chat_id": "chat id the message belongs to",
       "id": "unique id of the message",
-      "sent_at": 1,
+      "sent_at": "RFC3339Nano timestamp",
       "text": "text within the message"
     }
   ]
@@ -89,7 +89,7 @@ Send a message to a chat room
     "author_id": "user id of the message",
     "chat_id": "chat id the message belongs to",
     "id": "unique id of the message",
-    "sent_at": 1,
+    "sent_at": "RFC3339Nano timestamp",
     "text": "text within the message"
   }
 }

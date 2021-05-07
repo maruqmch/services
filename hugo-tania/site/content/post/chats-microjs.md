@@ -11,7 +11,7 @@ labels:
 ### Chats CreateChat
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-
+Create a new chat between mulitple users
 ```html
 <script src="https://web.m3o.com/assets/micro.js"></script>
 <script type="text/javascript">
@@ -22,6 +22,7 @@ being lifted correctly from the proto by the openapi spec generator -->
         "/chats/Chats/CreateChat",
         "micro",
         {
+          "id": "The chat ID",
           "user_ids": [
                     "string"
           ]
@@ -36,10 +37,10 @@ being lifted correctly from the proto by the openapi spec generator -->
 ```
 
 
-### Chats CreateMessage
+### Chats ListMessages
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-
+List messages within a chat
 ```html
 <script src="https://web.m3o.com/assets/micro.js"></script>
 <script type="text/javascript">
@@ -47,13 +48,13 @@ being lifted correctly from the proto by the openapi spec generator -->
     // Login is only required for endpoints doing authorization
     Micro.requireLogin(function () {
       Micro.post(
-        "/chats/Chats/CreateMessage",
+        "/chats/Chats/ListMessages",
         "micro",
         {
-          "author_id": "string",
-          "chat_id": "string",
-          "id": "string",
-          "text": "string"
+          "chat_id": "unique id of the chat",
+          "limit": 1,
+          "offset": 1,
+          "order": "order \"asc\" or \"desc\" (defaults to reverse chronological)"
 },
         function (data) {
           console.log("Success.");
@@ -65,10 +66,10 @@ being lifted correctly from the proto by the openapi spec generator -->
 ```
 
 
-### Chats ListMessages
+### Chats SendMessage
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
-
+Send a message to a chat room
 ```html
 <script src="https://web.m3o.com/assets/micro.js"></script>
 <script type="text/javascript">
@@ -76,12 +77,13 @@ being lifted correctly from the proto by the openapi spec generator -->
     // Login is only required for endpoints doing authorization
     Micro.requireLogin(function () {
       Micro.post(
-        "/chats/Chats/ListMessages",
+        "/chats/Chats/SendMessage",
         "micro",
         {
+          "author_id": "string",
           "chat_id": "string",
-          "limit": {},
-          "sent_before": "string"
+          "id": "string",
+          "text": "string"
 },
         function (data) {
           console.log("Success.");

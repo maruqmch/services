@@ -67,60 +67,7 @@
     <p>Manage group memberships</p>
 <h1 id="groups-service">Groups Service</h1>
 <p>The group service is a basic CRUD service for group membership management. Create groups, add members and lookup which groups a user is a member of.</p>
-<p>Example usage:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ micro groups create --name<span class="o">=</span>Micro
-<span class="o">{</span>
-	<span class="s2">&#34;group&#34;</span>: <span class="o">{</span>
-		<span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;e35562c9-b6f6-459a-b52d-7e6159465fd6&#34;</span>,
-		<span class="s2">&#34;name&#34;</span>: <span class="s2">&#34;Micro&#34;</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-$ micro groups addMember --group_id<span class="o">=</span>e35562c9-b6f6-459a-b52d-7e6159465fd6 --member_id<span class="o">=</span>Asim
-<span class="o">{}</span>
-$ micro groups list --member_id<span class="o">=</span>Asim
-<span class="o">{</span>
-	<span class="s2">&#34;groups&#34;</span>: <span class="o">[</span>
-		<span class="o">{</span>
-			<span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;e35562c9-b6f6-459a-b52d-7e6159465fd6&#34;</span>,
-			<span class="s2">&#34;name&#34;</span>: <span class="s2">&#34;Micro&#34;</span>,
-			<span class="s2">&#34;member_ids&#34;</span>: <span class="o">[</span>
-				<span class="s2">&#34;Asim&#34;</span>
-			<span class="o">]</span>
-		<span class="o">}</span>
-	<span class="o">]</span>
-<span class="o">}</span>
-$ micro groups list --member_id<span class="o">=</span>Boris
-<span class="o">{}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="curl">cURL</h2>
+<h2 id="curl">cURL</h2>
 <h3 id="groups-addmember">Groups AddMember</h3>
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->

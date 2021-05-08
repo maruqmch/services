@@ -69,12 +69,7 @@
     <p>Store and search for points of interest</p>
 <h1 id="places-service">Places Service</h1>
 <p>The places API stores points of interest and enables you to search for places nearby or last visited.</p>
-<h2 id="usage">Usage</h2>
-<p>Places makes use of postgres. Set the config for the database</p>
-<pre><code>micro user config set places.database &quot;postgresql://postgres@localhost:5432/locations?sslmode=disable&quot;
-</code></pre><p>Run the service</p>
-<pre><code>micro run .
-</code></pre><h2 id="curl">cURL</h2>
+<h2 id="curl">cURL</h2>
 <h3 id="places-last">Places Last</h3>
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->

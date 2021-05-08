@@ -4,6 +4,8 @@ servicename: streams
 labels: 
 - Readme
 ---
+PubSub streaming and websockets
+
 # Streams Service
 
 The streams service provides an event stream, designed for sending messages from a server to mutliple

@@ -125,7 +125,7 @@ Groups Service The group service is a basic CRUD service for group membership ma
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://services.m3o.com/helloworld/</guid>
-      <description>A simple hello world service
+      <description>Returns personalised hello world
 Helloworld Service Helloworld simply returns a personalized message in response to a name.</description>
     </item>
     

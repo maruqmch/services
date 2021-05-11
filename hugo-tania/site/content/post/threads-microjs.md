@@ -8,33 +8,6 @@ labels:
 ## Micro.js
 
 
-### Threads CreateConversation
-<!-- We use the request body description here as endpoint descriptions are not
-being lifted correctly from the proto by the openapi spec generator -->
-
-```html
-<script src="https://web.m3o.com/assets/micro.js"></script>
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function (event) {
-    // Login is only required for endpoints doing authorization
-    Micro.requireLogin(function () {
-      Micro.post(
-        "/threads/Threads/CreateConversation",
-        "micro",
-        {
-          "group_id": "string",
-          "topic": "string"
-},
-        function (data) {
-          console.log("Success.");
-        }
-      );
-    });
-  });
-</script>
-```
-
-
 ### Threads CreateMessage
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
@@ -50,9 +23,9 @@ being lifted correctly from the proto by the openapi spec generator -->
         "micro",
         {
           "author_id": "string",
-          "conversation_id": "string",
           "id": "string",
-          "text": "string"
+          "text": "string",
+          "thread_id": "string"
 },
         function (data) {
           console.log("Success.");
@@ -64,7 +37,7 @@ being lifted correctly from the proto by the openapi spec generator -->
 ```
 
 
-### Threads DeleteConversation
+### Threads CreateThread
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 
@@ -75,36 +48,37 @@ being lifted correctly from the proto by the openapi spec generator -->
     // Login is only required for endpoints doing authorization
     Micro.requireLogin(function () {
       Micro.post(
-        "/threads/Threads/DeleteConversation",
+        "/threads/Threads/CreateThread",
+        "micro",
+        {
+          "group_id": "string",
+          "topic": "string"
+},
+        function (data) {
+          console.log("Success.");
+        }
+      );
+    });
+  });
+</script>
+```
+
+
+### Threads DeleteThread
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+
+```html
+<script src="https://web.m3o.com/assets/micro.js"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function (event) {
+    // Login is only required for endpoints doing authorization
+    Micro.requireLogin(function () {
+      Micro.post(
+        "/threads/Threads/DeleteThread",
         "micro",
         {
           "id": "string"
-},
-        function (data) {
-          console.log("Success.");
-        }
-      );
-    });
-  });
-</script>
-```
-
-
-### Threads ListConversations
-<!-- We use the request body description here as endpoint descriptions are not
-being lifted correctly from the proto by the openapi spec generator -->
-
-```html
-<script src="https://web.m3o.com/assets/micro.js"></script>
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function (event) {
-    // Login is only required for endpoints doing authorization
-    Micro.requireLogin(function () {
-      Micro.post(
-        "/threads/Threads/ListConversations",
-        "micro",
-        {
-          "group_id": "string"
 },
         function (data) {
           console.log("Success.");
@@ -130,9 +104,10 @@ being lifted correctly from the proto by the openapi spec generator -->
         "/threads/Threads/ListMessages",
         "micro",
         {
-          "conversation_id": "string",
-          "limit": {},
-          "sent_before": "string"
+          "limit": 1,
+          "offset": 1,
+          "order": "string",
+          "thread_id": "string"
 },
         function (data) {
           console.log("Success.");
@@ -144,7 +119,7 @@ being lifted correctly from the proto by the openapi spec generator -->
 ```
 
 
-### Threads ReadConversation
+### Threads ListThreads
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 
@@ -155,10 +130,36 @@ being lifted correctly from the proto by the openapi spec generator -->
     // Login is only required for endpoints doing authorization
     Micro.requireLogin(function () {
       Micro.post(
-        "/threads/Threads/ReadConversation",
+        "/threads/Threads/ListThreads",
         "micro",
         {
-          "group_id": {},
+          "group_id": "string"
+},
+        function (data) {
+          console.log("Success.");
+        }
+      );
+    });
+  });
+</script>
+```
+
+
+### Threads ReadThread
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+
+```html
+<script src="https://web.m3o.com/assets/micro.js"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function (event) {
+    // Login is only required for endpoints doing authorization
+    Micro.requireLogin(function () {
+      Micro.post(
+        "/threads/Threads/ReadThread",
+        "micro",
+        {
+          "group_id": "string",
           "id": "string"
 },
         function (data) {
@@ -185,10 +186,10 @@ being lifted correctly from the proto by the openapi spec generator -->
         "/threads/Threads/RecentMessages",
         "micro",
         {
-          "conversation_ids": [
+          "limit_per_thread": 1,
+          "thread_ids": [
                     "string"
-          ],
-          "limit_per_conversation": {}
+          ]
 },
         function (data) {
           console.log("Success.");
@@ -200,7 +201,7 @@ being lifted correctly from the proto by the openapi spec generator -->
 ```
 
 
-### Threads UpdateConversation
+### Threads UpdateThread
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 
@@ -211,7 +212,7 @@ being lifted correctly from the proto by the openapi spec generator -->
     // Login is only required for endpoints doing authorization
     Micro.requireLogin(function () {
       Micro.post(
-        "/threads/Threads/UpdateConversation",
+        "/threads/Threads/UpdateThread",
         "micro",
         {
           "id": "string",

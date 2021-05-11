@@ -14,30 +14,6 @@ Threads provides threaded conversations as a service grouped by topics.
 ## cURL
 
 
-### Threads CreateConversation
-<!-- We use the request body description here as endpoint descriptions are not
-being lifted correctly from the proto by the openapi spec generator -->
-
-```shell
-> curl 'https://api.m3o.com/threads/Threads/CreateConversation' \
-  -H 'micro-namespace: $yourNamespace' \
-  -H 'authorization: Bearer $yourToken' \
-  -d {
-  "group_id": "string",
-  "topic": "string"
-};
-# Response
-{
-  "conversation": {
-    "created_at": "string",
-    "group_id": "string",
-    "id": "string",
-    "topic": "string"
-  }
-}
-```
-
-
 ### Threads CreateMessage
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
@@ -48,29 +24,53 @@ being lifted correctly from the proto by the openapi spec generator -->
   -H 'authorization: Bearer $yourToken' \
   -d {
   "author_id": "string",
-  "conversation_id": "string",
   "id": "string",
-  "text": "string"
+  "text": "string",
+  "thread_id": "string"
 };
 # Response
 {
   "message": {
     "author_id": "string",
-    "conversation_id": "string",
     "id": "string",
     "sent_at": "string",
-    "text": "string"
+    "text": "string",
+    "thread_id": "string"
   }
 }
 ```
 
 
-### Threads DeleteConversation
+### Threads CreateThread
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 
 ```shell
-> curl 'https://api.m3o.com/threads/Threads/DeleteConversation' \
+> curl 'https://api.m3o.com/threads/Threads/CreateThread' \
+  -H 'micro-namespace: $yourNamespace' \
+  -H 'authorization: Bearer $yourToken' \
+  -d {
+  "group_id": "string",
+  "topic": "string"
+};
+# Response
+{
+  "thread": {
+    "created_at": "string",
+    "group_id": "string",
+    "id": "string",
+    "topic": "string"
+  }
+}
+```
+
+
+### Threads DeleteThread
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+
+```shell
+> curl 'https://api.m3o.com/threads/Threads/DeleteThread' \
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
   -d {
@@ -78,31 +78,6 @@ being lifted correctly from the proto by the openapi spec generator -->
 };
 # Response
 {}
-```
-
-
-### Threads ListConversations
-<!-- We use the request body description here as endpoint descriptions are not
-being lifted correctly from the proto by the openapi spec generator -->
-
-```shell
-> curl 'https://api.m3o.com/threads/Threads/ListConversations' \
-  -H 'micro-namespace: $yourNamespace' \
-  -H 'authorization: Bearer $yourToken' \
-  -d {
-  "group_id": "string"
-};
-# Response
-{
-  "conversations": [
-    {
-      "created_at": "string",
-      "group_id": "string",
-      "id": "string",
-      "topic": "string"
-    }
-  ]
-}
 ```
 
 
@@ -115,40 +90,66 @@ being lifted correctly from the proto by the openapi spec generator -->
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
   -d {
-  "conversation_id": "string",
-  "limit": {},
-  "sent_before": "string"
+  "limit": 1,
+  "offset": 1,
+  "order": "string",
+  "thread_id": "string"
 };
 # Response
 {
   "messages": [
     {
       "author_id": "string",
-      "conversation_id": "string",
       "id": "string",
       "sent_at": "string",
-      "text": "string"
+      "text": "string",
+      "thread_id": "string"
     }
   ]
 }
 ```
 
 
-### Threads ReadConversation
+### Threads ListThreads
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 
 ```shell
-> curl 'https://api.m3o.com/threads/Threads/ReadConversation' \
+> curl 'https://api.m3o.com/threads/Threads/ListThreads' \
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
   -d {
-  "group_id": {},
+  "group_id": "string"
+};
+# Response
+{
+  "threads": [
+    {
+      "created_at": "string",
+      "group_id": "string",
+      "id": "string",
+      "topic": "string"
+    }
+  ]
+}
+```
+
+
+### Threads ReadThread
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+
+```shell
+> curl 'https://api.m3o.com/threads/Threads/ReadThread' \
+  -H 'micro-namespace: $yourNamespace' \
+  -H 'authorization: Bearer $yourToken' \
+  -d {
+  "group_id": "string",
   "id": "string"
 };
 # Response
 {
-  "conversation": {
+  "thread": {
     "created_at": "string",
     "group_id": "string",
     "id": "string",
@@ -167,32 +168,32 @@ being lifted correctly from the proto by the openapi spec generator -->
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
   -d {
-  "conversation_ids": [
+  "limit_per_thread": 1,
+  "thread_ids": [
     "string"
-  ],
-  "limit_per_conversation": {}
+  ]
 };
 # Response
 {
   "messages": [
     {
       "author_id": "string",
-      "conversation_id": "string",
       "id": "string",
       "sent_at": "string",
-      "text": "string"
+      "text": "string",
+      "thread_id": "string"
     }
   ]
 }
 ```
 
 
-### Threads UpdateConversation
+### Threads UpdateThread
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 
 ```shell
-> curl 'https://api.m3o.com/threads/Threads/UpdateConversation' \
+> curl 'https://api.m3o.com/threads/Threads/UpdateThread' \
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
   -d {
@@ -201,7 +202,7 @@ being lifted correctly from the proto by the openapi spec generator -->
 };
 # Response
 {
-  "conversation": {
+  "thread": {
     "created_at": "string",
     "group_id": "string",
     "id": "string",

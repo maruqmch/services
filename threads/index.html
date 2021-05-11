@@ -68,48 +68,7 @@
 <h1 id="threads-service">Threads Service</h1>
 <p>Threads provides threaded conversations as a service grouped by topics.</p>
 <h2 id="curl">cURL</h2>
-<h3 id="threads-createconversation">Threads CreateConversation</h3>
-<!-- We use the request body description here as endpoint descriptions are not
-being lifted correctly from the proto by the openapi spec generator -->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/CreateConversation&#39;</span> <span class="se">\
-</span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
-</span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
-</span><span class="se"></span>  -d <span class="o">{</span>
-  <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-  <span class="s2">&#34;topic&#34;</span>: <span class="s2">&#34;string&#34;</span>
-<span class="o">}</span><span class="p">;</span>
-<span class="c1"># Response</span>
-<span class="o">{</span>
-  <span class="s2">&#34;conversation&#34;</span>: <span class="o">{</span>
-    <span class="s2">&#34;created_at&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-    <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-    <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-    <span class="s2">&#34;topic&#34;</span>: <span class="s2">&#34;string&#34;</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="threads-createmessage">Threads CreateMessage</h3>
+<h3 id="threads-createmessage">Threads CreateMessage</h3>
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 <div class="highlight"><div class="chroma">
@@ -140,48 +99,23 @@ being lifted correctly from the proto by the openapi spec generator -->
 </span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
 </span><span class="se"></span>  -d <span class="o">{</span>
   <span class="s2">&#34;author_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-  <span class="s2">&#34;conversation_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
   <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-  <span class="s2">&#34;text&#34;</span>: <span class="s2">&#34;string&#34;</span>
+  <span class="s2">&#34;text&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+  <span class="s2">&#34;thread_id&#34;</span>: <span class="s2">&#34;string&#34;</span>
 <span class="o">}</span><span class="p">;</span>
 <span class="c1"># Response</span>
 <span class="o">{</span>
   <span class="s2">&#34;message&#34;</span>: <span class="o">{</span>
     <span class="s2">&#34;author_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-    <span class="s2">&#34;conversation_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
     <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
     <span class="s2">&#34;sent_at&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-    <span class="s2">&#34;text&#34;</span>: <span class="s2">&#34;string&#34;</span>
+    <span class="s2">&#34;text&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+    <span class="s2">&#34;thread_id&#34;</span>: <span class="s2">&#34;string&#34;</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="threads-deleteconversation">Threads DeleteConversation</h3>
-<!-- We use the request body description here as endpoint descriptions are not
-being lifted correctly from the proto by the openapi spec generator -->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/DeleteConversation&#39;</span> <span class="se">\
-</span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
-</span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
-</span><span class="se"></span>  -d <span class="o">{</span>
-  <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>
-<span class="o">}</span><span class="p">;</span>
-<span class="c1"># Response</span>
-<span class="o">{}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="threads-listconversations">Threads ListConversations</h3>
+</div><h3 id="threads-createthread">Threads CreateThread</h3>
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 <div class="highlight"><div class="chroma">
@@ -202,26 +136,49 @@ being lifted correctly from the proto by the openapi spec generator -->
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/ListConversations&#39;</span> <span class="se">\
+<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/CreateThread&#39;</span> <span class="se">\
 </span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
 </span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
 </span><span class="se"></span>  -d <span class="o">{</span>
-  <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>
+  <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+  <span class="s2">&#34;topic&#34;</span>: <span class="s2">&#34;string&#34;</span>
 <span class="o">}</span><span class="p">;</span>
 <span class="c1"># Response</span>
 <span class="o">{</span>
-  <span class="s2">&#34;conversations&#34;</span>: <span class="o">[</span>
-    <span class="o">{</span>
-      <span class="s2">&#34;created_at&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-      <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-      <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-      <span class="s2">&#34;topic&#34;</span>: <span class="s2">&#34;string&#34;</span>
-    <span class="o">}</span>
-  <span class="o">]</span>
+  <span class="s2">&#34;thread&#34;</span>: <span class="o">{</span>
+    <span class="s2">&#34;created_at&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+    <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+    <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+    <span class="s2">&#34;topic&#34;</span>: <span class="s2">&#34;string&#34;</span>
+  <span class="o">}</span>
 <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="threads-deletethread">Threads DeleteThread</h3>
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/DeleteThread&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
+</span><span class="se"></span>  -d <span class="o">{</span>
+  <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>
+<span class="o">}</span><span class="p">;</span>
+<span class="c1"># Response</span>
+<span class="o">{}</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="threads-listmessages">Threads ListMessages</h3>
@@ -249,31 +206,76 @@ being lifted correctly from the proto by the openapi spec generator -->
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
+</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/ListMessages&#39;</span> <span class="se">\
 </span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
 </span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
 </span><span class="se"></span>  -d <span class="o">{</span>
-  <span class="s2">&#34;conversation_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-  <span class="s2">&#34;limit&#34;</span>: <span class="o">{}</span>,
-  <span class="s2">&#34;sent_before&#34;</span>: <span class="s2">&#34;string&#34;</span>
+  <span class="s2">&#34;limit&#34;</span>: 1,
+  <span class="s2">&#34;offset&#34;</span>: 1,
+  <span class="s2">&#34;order&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+  <span class="s2">&#34;thread_id&#34;</span>: <span class="s2">&#34;string&#34;</span>
 <span class="o">}</span><span class="p">;</span>
 <span class="c1"># Response</span>
 <span class="o">{</span>
   <span class="s2">&#34;messages&#34;</span>: <span class="o">[</span>
     <span class="o">{</span>
       <span class="s2">&#34;author_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-      <span class="s2">&#34;conversation_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
       <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
       <span class="s2">&#34;sent_at&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-      <span class="s2">&#34;text&#34;</span>: <span class="s2">&#34;string&#34;</span>
+      <span class="s2">&#34;text&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+      <span class="s2">&#34;thread_id&#34;</span>: <span class="s2">&#34;string&#34;</span>
     <span class="o">}</span>
   <span class="o">]</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="threads-readconversation">Threads ReadConversation</h3>
+</div><h3 id="threads-listthreads">Threads ListThreads</h3>
+<!-- We use the request body description here as endpoint descriptions are not
+being lifted correctly from the proto by the openapi spec generator -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/ListThreads&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
+</span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
+</span><span class="se"></span>  -d <span class="o">{</span>
+  <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>
+<span class="o">}</span><span class="p">;</span>
+<span class="c1"># Response</span>
+<span class="o">{</span>
+  <span class="s2">&#34;threads&#34;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">&#34;created_at&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+      <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+      <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+      <span class="s2">&#34;topic&#34;</span>: <span class="s2">&#34;string&#34;</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="threads-readthread">Threads ReadThread</h3>
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 <div class="highlight"><div class="chroma">
@@ -296,16 +298,16 @@ being lifted correctly from the proto by the openapi spec generator -->
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/ReadConversation&#39;</span> <span class="se">\
+<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/ReadThread&#39;</span> <span class="se">\
 </span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
 </span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
 </span><span class="se"></span>  -d <span class="o">{</span>
-  <span class="s2">&#34;group_id&#34;</span>: <span class="o">{}</span>,
+  <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
   <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>
 <span class="o">}</span><span class="p">;</span>
 <span class="c1"># Response</span>
 <span class="o">{</span>
-  <span class="s2">&#34;conversation&#34;</span>: <span class="o">{</span>
+  <span class="s2">&#34;thread&#34;</span>: <span class="o">{</span>
     <span class="s2">&#34;created_at&#34;</span>: <span class="s2">&#34;string&#34;</span>,
     <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
     <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
@@ -346,26 +348,26 @@ being lifted correctly from the proto by the openapi spec generator -->
 </span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
 </span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
 </span><span class="se"></span>  -d <span class="o">{</span>
-  <span class="s2">&#34;conversation_ids&#34;</span>: <span class="o">[</span>
+  <span class="s2">&#34;limit_per_thread&#34;</span>: 1,
+  <span class="s2">&#34;thread_ids&#34;</span>: <span class="o">[</span>
     <span class="s2">&#34;string&#34;</span>
-  <span class="o">]</span>,
-  <span class="s2">&#34;limit_per_conversation&#34;</span>: <span class="o">{}</span>
+  <span class="o">]</span>
 <span class="o">}</span><span class="p">;</span>
 <span class="c1"># Response</span>
 <span class="o">{</span>
   <span class="s2">&#34;messages&#34;</span>: <span class="o">[</span>
     <span class="o">{</span>
       <span class="s2">&#34;author_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-      <span class="s2">&#34;conversation_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
       <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
       <span class="s2">&#34;sent_at&#34;</span>: <span class="s2">&#34;string&#34;</span>,
-      <span class="s2">&#34;text&#34;</span>: <span class="s2">&#34;string&#34;</span>
+      <span class="s2">&#34;text&#34;</span>: <span class="s2">&#34;string&#34;</span>,
+      <span class="s2">&#34;thread_id&#34;</span>: <span class="s2">&#34;string&#34;</span>
     <span class="o">}</span>
   <span class="o">]</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="threads-updateconversation">Threads UpdateConversation</h3>
+</div><h3 id="threads-updatethread">Threads UpdateThread</h3>
 <!-- We use the request body description here as endpoint descriptions are not
 being lifted correctly from the proto by the openapi spec generator -->
 <div class="highlight"><div class="chroma">
@@ -388,7 +390,7 @@ being lifted correctly from the proto by the openapi spec generator -->
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/UpdateConversation&#39;</span> <span class="se">\
+<pre class="chroma"><code class="language-shell" data-lang="shell">&gt; curl <span class="s1">&#39;https://api.m3o.com/threads/Threads/UpdateThread&#39;</span> <span class="se">\
 </span><span class="se"></span>  -H <span class="s1">&#39;micro-namespace: $yourNamespace&#39;</span> <span class="se">\
 </span><span class="se"></span>  -H <span class="s1">&#39;authorization: Bearer $yourToken&#39;</span> <span class="se">\
 </span><span class="se"></span>  -d <span class="o">{</span>
@@ -397,7 +399,7 @@ being lifted correctly from the proto by the openapi spec generator -->
 <span class="o">}</span><span class="p">;</span>
 <span class="c1"># Response</span>
 <span class="o">{</span>
-  <span class="s2">&#34;conversation&#34;</span>: <span class="o">{</span>
+  <span class="s2">&#34;thread&#34;</span>: <span class="o">{</span>
     <span class="s2">&#34;created_at&#34;</span>: <span class="s2">&#34;string&#34;</span>,
     <span class="s2">&#34;group_id&#34;</span>: <span class="s2">&#34;string&#34;</span>,
     <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;string&#34;</span>,

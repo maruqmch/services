@@ -7,16 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://services.m3o.com/labels/readme/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>chats</title>
-      <link>https://services.m3o.com/chats/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://services.m3o.com/chats/</guid>
-      <description>Chats is a service for direct messaging
-Chats Service The chats service enables direct messaging between one or more parties.</description>
-    </item>
-    
-    <item>
       <title>datastore</title>
       <link>https://services.m3o.com/datastore/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -56,16 +46,6 @@ Geocoding Service The geocoding service provides address to lat lng geocoding as
     </item>
     
     <item>
-      <title>groups</title>
-      <link>https://services.m3o.com/groups/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://services.m3o.com/groups/</guid>
-      <description>Manage group memberships
-Groups Service The group service is a basic CRUD service for group membership management.</description>
-    </item>
-    
-    <item>
       <title>helloworld</title>
       <link>https://services.m3o.com/helloworld/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -83,16 +63,6 @@ Helloworld Service Helloworld simply returns a personalized message in response 
       <guid>https://services.m3o.com/image/</guid>
       <description>Quickly upload, resize and convert images
 Image Service The image service provides upload, resize and image conversion.</description>
-    </item>
-    
-    <item>
-      <title>invites</title>
-      <link>https://services.m3o.com/invites/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://services.m3o.com/invites/</guid>
-      <description>Manage and send user and group invites
-Invites Service The invites services allows you to create and manage invites for users and groups by providing invite codes.</description>
     </item>
     
     <item>
@@ -145,15 +115,6 @@ Routing Service The routing service provides etas, gps routes and turn by turn d
     </item>
     
     <item>
-      <title>seen</title>
-      <link>https://services.m3o.com/seen/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://services.m3o.com/seen/</guid>
-      <description>Seen is a service to keep track of which resources a user has seen (read).</description>
-    </item>
-    
-    <item>
       <title>sentiment</title>
       <link>https://services.m3o.com/sentiment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -164,16 +125,6 @@ Sentiment Service The sentiment service provides rudimentary sentiment analysis 
     </item>
     
     <item>
-      <title>streams</title>
-      <link>https://services.m3o.com/streams/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://services.m3o.com/streams/</guid>
-      <description>PubSub streaming and websockets
-Streams Service The streams service provides an event stream, designed for sending messages from a server to mutliple clients connecting via Websockets.</description>
-    </item>
-    
-    <item>
       <title>tags</title>
       <link>https://services.m3o.com/tags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -181,26 +132,6 @@ Streams Service The streams service provides an event stream, designed for sendi
       <guid>https://services.m3o.com/tags/</guid>
       <description>Generate tags and metadata for any resource
 Tag Service The tags service enables creation of tags for any resource by saving a tag associated with their respective ID</description>
-    </item>
-    
-    <item>
-      <title>threads</title>
-      <link>https://services.m3o.com/threads/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://services.m3o.com/threads/</guid>
-      <description>Threaded conversations
-Threads Service Threads provides threaded conversations as a service grouped by topics.</description>
-    </item>
-    
-    <item>
-      <title>users</title>
-      <link>https://services.m3o.com/users/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://services.m3o.com/users/</guid>
-      <description>Usage management and authentication
-Users Service The user service provides user management, storage and authentication.</description>
     </item>
     
   </channel>

@@ -10,10 +10,6 @@
   </url><url>
     <loc>https://services.m3o.com/labels/backend/</loc>
   </url><url>
-    <loc>https://services.m3o.com/chats/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/chats-microjs/</loc>
-  </url><url>
     <loc>https://services.m3o.com/datastore/</loc>
   </url><url>
     <loc>https://services.m3o.com/datastore-microjs/</loc>
@@ -30,10 +26,6 @@
   </url><url>
     <loc>https://services.m3o.com/geocoding-microjs/</loc>
   </url><url>
-    <loc>https://services.m3o.com/groups/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/groups-microjs/</loc>
-  </url><url>
     <loc>https://services.m3o.com/labels/headless-cms/</loc>
   </url><url>
     <loc>https://services.m3o.com/helloworld/</loc>
@@ -43,10 +35,6 @@
     <loc>https://services.m3o.com/image/</loc>
   </url><url>
     <loc>https://services.m3o.com/image-microjs/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/invites/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/invites-microjs/</loc>
   </url><url>
     <loc>https://services.m3o.com/labels/</loc>
   </url><url>
@@ -78,28 +66,12 @@
   </url><url>
     <loc>https://services.m3o.com/routing-microjs/</loc>
   </url><url>
-    <loc>https://services.m3o.com/seen/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/seen-microjs/</loc>
-  </url><url>
     <loc>https://services.m3o.com/sentiment/</loc>
   </url><url>
     <loc>https://services.m3o.com/sentiment-microjs/</loc>
   </url><url>
-    <loc>https://services.m3o.com/streams/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/streams-microjs/</loc>
-  </url><url>
     <loc>https://services.m3o.com/tags/</loc>
   </url><url>
     <loc>https://services.m3o.com/tags-microjs/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/threads/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/threads-microjs/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/users/</loc>
-  </url><url>
-    <loc>https://services.m3o.com/users-microjs/</loc>
   </url>
 </urlset>

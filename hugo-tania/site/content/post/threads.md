@@ -168,6 +168,7 @@ being lifted correctly from the proto by the openapi spec generator -->
   -H 'micro-namespace: $yourNamespace' \
   -H 'authorization: Bearer $yourToken' \
   -d {
+  "group_id": "string",
   "limit_per_thread": 1,
   "thread_ids": [
     "string"

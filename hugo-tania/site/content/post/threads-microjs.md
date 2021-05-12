@@ -186,6 +186,7 @@ being lifted correctly from the proto by the openapi spec generator -->
         "/threads/Threads/RecentMessages",
         "micro",
         {
+          "group_id": "string",
           "limit_per_thread": 1,
           "thread_ids": [
                     "string"

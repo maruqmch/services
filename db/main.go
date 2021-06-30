@@ -16,7 +16,7 @@ import (
 	_ "github.com/jackc/pgx/v4/stdlib"
 )
 
-var dbAddress = "postgresql://postgres:postgres@localhost:5432/db?sslmode=disable"
+var dbAddress = "postgresql://postgres:postgres@localhost:5432/micro?sslmode=disable"
 
 func main() {
 	// Create service
